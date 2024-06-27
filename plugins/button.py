@@ -96,7 +96,7 @@ async def youtube_dl_call_back(bot, update):
     command_to_exec = []
     if tg_send_type == "audio":
         command_to_exec = [
-            "yt-dlp",
+            "youtube-dl",
             "-c",
             "--max-filesize", str(Config.TG_MAX_FILE_SIZE),
             "--bidi-workaround",
@@ -109,7 +109,7 @@ async def youtube_dl_call_back(bot, update):
     else:
         minus_f_format = youtube_dl_format + "bestvideo+bestaudio/best"
         command_to_exec = [
-            "yt-dlp",
+            "youtube-dl",
             "-c",
             "--max-filesize", str(Config.TG_MAX_FILE_SIZE),
             "--embed-subs",
