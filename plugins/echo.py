@@ -99,7 +99,7 @@ async def echo(bot, update):
         command_to_exec = [
             "youtube-dl",
             "--no-warnings",
-            "--youtube-skip-hls-manifest",
+            "--youtube-skip-dash-manifest",
             "-j",
             url,
             "--proxy", Config.HTTP_PROXY
@@ -108,7 +108,7 @@ async def echo(bot, update):
         command_to_exec = [
             "youtube-dl",
             "--no-warnings",
-            "--youtube-skip-hls-manifest",
+            "--youtube-skip-dash-manifest",
             "-j",
             url
         ]
