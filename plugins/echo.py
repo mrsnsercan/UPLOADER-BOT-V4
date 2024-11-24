@@ -97,18 +97,18 @@ async def echo(bot, update):
                 url = url[o:o + l]
     if Config.HTTP_PROXY != "":
         command_to_exec = [
-            "youtube-dl",
+            "yt-dlp",
             "--no-warnings",
-            "--youtube-skip-dash-manifest",
+            "--youtube-skip-hls-manifest",
             "-j",
             url,
             "--proxy", Config.HTTP_PROXY
         ]
     else:
         command_to_exec = [
-            "youtube-dl",
+            "yt-dlp",
             "--no-warnings",
-            "--youtube-skip-dash-manifest",
+            "--youtube-skip-hls-manifest",
             "-j",
             url
         ]
